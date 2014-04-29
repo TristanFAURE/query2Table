@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query2table:ModelExport xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:query2table="http://www.topcased.org/query2table/1.0" xmi:id="_ZQkM4KkaEd-2-vS_-DLUCA" outputPath="D:/AHD/dependencies.html" exportExtension="html">
+  <columns xmi:id="_dvHb0KkaEd-2-vS_-DLUCA" title="Packages">
+    <executes xsi:type="query2table:OCLQuery" xmi:id="_ftLrAKkaEd-2-vS_-DLUCA" oclQuery="Package.allInstances()">
+      <executionContext xsi:type="query2table:EMFContext" xmi:id="_hT_30KkaEd-2-vS_-DLUCA">
+        <modelElement href="EquipmentMonitoring.uml#_qb8akM37EdqwVrslYOdUDA"/>
+      </executionContext>
+    </executes>
+  </columns>
+  <columns xmi:id="_lo2_QKkaEd-2-vS_-DLUCA" index="1" title="Classes" pattern="">
+    <executes xsi:type="query2table:OCLQuery" xmi:id="_oCM1MKkaEd-2-vS_-DLUCA" oclQuery="self.ownedElement->select(oclIsKindOf(Class))">
+      <executionContext xsi:type="query2table:ColumnContext" xmi:id="_rcyswKkaEd-2-vS_-DLUCA" dependsOn="_dvHb0KkaEd-2-vS_-DLUCA"/>
+    </executes>
+  </columns>
+  <columns xmi:id="_tRLbgKkaEd-2-vS_-DLUCA" index="2" title="Attributes">
+    <executes xsi:type="query2table:OCLQuery" xmi:id="_xQlQUKkaEd-2-vS_-DLUCA" oclQuery="self.ownedAttribute">
+      <executionContext xsi:type="query2table:ColumnContext" xmi:id="_2ZJsoKkaEd-2-vS_-DLUCA" dependsOn="_lo2_QKkaEd-2-vS_-DLUCA"/>
+    </executes>
+  </columns>
+  <columns xmi:id="_vRUuUKkaEd-2-vS_-DLUCA" index="3" title="Operation">
+    <executes xsi:type="query2table:OCLQuery" xmi:id="_zaHvsKkaEd-2-vS_-DLUCA" oclQuery="self.ownedOperation">
+      <executionContext xsi:type="query2table:ColumnContext" xmi:id="_6Wr5MKkaEd-2-vS_-DLUCA" dependsOn="_lo2_QKkaEd-2-vS_-DLUCA"/>
+    </executes>
+  </columns>
+  <columns xmi:id="_wQDncKkaEd-2-vS_-DLUCA" index="4" title="Types">
+    <executes xsi:type="query2table:OCLQuery" xmi:id="_0iPOUKkaEd-2-vS_-DLUCA" oclQuery="self.type">
+      <executionContext xsi:type="query2table:ColumnContext" xmi:id="_7XM7AKkaEd-2-vS_-DLUCA" dependsOn="_tRLbgKkaEd-2-vS_-DLUCA"/>
+    </executes>
+  </columns>
+</query2table:ModelExport>

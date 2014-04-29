@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query2table:ModelExport xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:query2table="http://www.topcased.org/query2table/1.0" xmi:id="_fCOMMKlLEd-EVbqzZ3RTgA" >
+  <columns xmi:id="_iQmzwKlLEd-EVbqzZ3RTgA" title="Upstream Requirements">
+    <executes xsi:type="query2table:OCLQuery" xmi:id="_ljv_gKlLEd-EVbqzZ3RTgA" oclQuery="ttm::Requirement.allInstances()">
+      <executionContext xsi:type="query2table:EMFContext" xmi:id="_-TdagKlLEd-EVbqzZ3RTgA"/>
+    </executes>
+  </columns>
+  <columns xmi:id="_E97ucKlMEd-EVbqzZ3RTgA" index="1" title="Current Requirements">
+    <executes xsi:type="query2table:OCLQuery" xmi:id="_Hw4-QKlMEd-EVbqzZ3RTgA" oclQuery="requirement::CurrentRequirement.allInstances()->select(cur : requirement::CurrentRequirement | cur.attribute->select(oclIsTypeOf(requirement::AttributeLink))->exists(att : requirement::Attribute |   att.name='#Link_to' and (att.oclAsType(requirement::AttributeLink).value = self)))">
+      <executionContext xsi:type="query2table:ColumnContext" xmi:id="_R_DbYKlMEd-EVbqzZ3RTgA" dependsOn="_iQmzwKlLEd-EVbqzZ3RTgA"/>
+    </executes>
+  </columns>
+  <columns xmi:id="_WnWC4KlREd-79q0-O7TVMQ" index="2" title="Covered Model Elements">
+    <executes xsi:type="query2table:OCLQuery" xmi:id="_w0S38KlREd-79q0-O7TVMQ" oclQuery="self.eContainer().oclAsType(requirement::HierarchicalElement).element">
+      <executionContext xsi:type="query2table:ColumnContext" xmi:id="_UqKvEKlSEd-79q0-O7TVMQ" dependsOn="_E97ucKlMEd-EVbqzZ3RTgA"/>
+    </executes>
+  </columns>
+</query2table:ModelExport>

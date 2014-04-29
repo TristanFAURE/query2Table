@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query2table:ModelExport xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:query2table="http://www.topcased.org/query2table/1.0" xmi:id="_SAr-cKasEd-mLr-a5JnT5Q" outputPath="D:/AHD/exportAfterJavaQuery.html" exportExtension="html">
+  <columns xmi:id="_SAr-caasEd-mLr-a5JnT5Q" title="Packages" pattern="Package {0}">
+    <displays xsi:type="query2table:OCLQuery" xmi:id="_SAr-cqasEd-mLr-a5JnT5Q" oclQuery="self.name"/>
+    <executes xsi:type="query2table:OCLQuery" xmi:id="_SAr-dKasEd-mLr-a5JnT5Q" oclQuery="self.eContents()->select(oclIsKindOf(Package))">
+      <executionContext xsi:type="query2table:EMFContext" xmi:id="_SAr-daasEd-mLr-a5JnT5Q">
+        <modelElement href="EquipmentMonitoring.uml#_qb8akM37EdqwVrslYOdUDA"/>
+      </executionContext>
+    </executes>
+  </columns>
+  <columns xmi:id="_SAr-dqasEd-mLr-a5JnT5Q" index="1" title="All Children (computedBy JavaQuery)">
+    <executes xsi:type="query2table:JavaQuery" xmi:id="_zwmzsKbCEd-mGfdSj59Tkg" extensionId="javaQueryForTests">
+    	<executionContext xsi:type="query2table:ColumnContext" dependsOn="_SAr-caasEd-mLr-a5JnT5Q"/>
+    </executes>
+  </columns>
+  
+  <columns xmi:id="_SAr-dqasEd-mLr-a5JnT5" index="1" title="All Children (computedBy JavaQuery)">
+    <executes xsi:type="query2table:JavaQuery" xmi:id="_zwmzsKbCEd-mGfdSj59Tk" extensionId="javaQueryForTests">
+    	<executionContext xsi:type="query2table:ColumnContext" dependsOn="_SAr-dqasEd-mLr-a5JnT5Q"/>
+    </executes>
+  </columns>
+
+</query2table:ModelExport>

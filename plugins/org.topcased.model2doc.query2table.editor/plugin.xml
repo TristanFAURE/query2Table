@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ Copyright (c) 2010 Atos Origin.
+  *
+  *    
+  * All rights reserved. This program and the accompanying materials
+  * are made available under the terms of the Eclipse Public License v1.0
+  * which accompanies this distribution, and is available at
+  * http://www.eclipse.org/legal/epl-v10.html
+  *
+  * Contributors:
+  *  Anne Haugommard(Atos Origin) anne.haugommard@atosorigin.com - Initial API and implementation
+  *
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.topcased.model2doc.query2table.presentation.Query2tableModelWizardID"
+            name="%_UI_Query2tableModelWizard_label"
+            class="org.topcased.model2doc.query2table.presentation.Query2tableModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/Query2tableModelFile.gif">
+         <description>%_UI_Query2tableModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="org.topcased.model2doc.query2table.presentation.Query2tableEditorID"
+            name="%_UI_Query2tableEditor_label"
+            icon="icons/full/obj16/Query2tableModelFile.gif"
+            extensions="query2table"
+            class="org.topcased.model2doc.query2table.presentation.Query2tableEditor"
+            contributorClass="org.topcased.model2doc.query2table.presentation.Query2tableActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

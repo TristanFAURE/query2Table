@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2010 Atos Origin.&#xD;&#xA; &#xD;&#xA;    &#xD;&#xA; All rights reserved. This program and the accompanying materials&#xD;&#xA; are made available under the terms of the Eclipse Public License v1.0&#xD;&#xA; which accompanies this distribution, and is available at&#xD;&#xA; http://www.eclipse.org/legal/epl-v10.html&#xD;&#xA;&#xD;&#xA; Contributors:&#xD;&#xA; Anne Haugommard(Atos Origin) anne.haugommard@atosorigin.com - Initial API&#xD;&#xA; "
+    modelDirectory="/org.topcased.model2doc.query2table/src" modelPluginID="org.topcased.model2doc.query2table"
+    modelName="Query2table" testsDirectory="" testSuiteClass="" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="5.0">
+  <foreignModel>query2table.ecore</foreignModel>
+  <genPackages prefix="Query2table" basePackage="org.topcased.model2doc" resource="XMI"
+      disposableProviderFactory="true" contentTypeIdentifier="" ecorePackage="query2table.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="query2table.ecore#//ExportExtension">
+      <genEnumLiterals ecoreEnumLiteral="query2table.ecore#//ExportExtension/xls"/>
+      <genEnumLiterals ecoreEnumLiteral="query2table.ecore#//ExportExtension/html"/>
+      <genEnumLiterals ecoreEnumLiteral="query2table.ecore#//ExportExtension/csv"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="query2table.ecore#//DependencyManagement">
+      <genEnumLiterals ecoreEnumLiteral="query2table.ecore#//DependencyManagement/SUBTABLE"/>
+      <genEnumLiterals ecoreEnumLiteral="query2table.ecore#//DependencyManagement/DUPLICATE"/>
+    </genEnums>
+    <genClasses ecoreClass="query2table.ecore#//ModelExport">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query2table.ecore#//ModelExport/outputPath"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query2table.ecore#//ModelExport/exportExtension"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference query2table.ecore#//ModelExport/columns"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference query2table.ecore#//ModelExport/emfContext"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query2table.ecore#//ModelExport/dependencyManagement"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query2table.ecore#//ModelExport/cellSpan"/>
+    </genClasses>
+    <genClasses ecoreClass="query2table.ecore#//Column">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query2table.ecore#//Column/index"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query2table.ecore#//Column/title"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query2table.ecore#//Column/pattern"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference query2table.ecore#//Column/displays"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference query2table.ecore#//Column/executes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query2table.ecore#//Column/defaultValueToDisplay"/>
+      <genOperations ecoreOperation="query2table.ecore#//Column/addDisplayQuery">
+        <genParameters ecoreParameter="query2table.ecore#//Column/addDisplayQuery/displayQuery"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false" ecoreClass="query2table.ecore#//Query">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference query2table.ecore#//Query/executionContext"/>
+      <genOperations ecoreOperation="query2table.ecore#//Query/executeQuery">
+        <genParameters ecoreParameter="query2table.ecore#//Query/executeQuery/contextValue"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="query2table.ecore#//OCLQuery">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query2table.ecore#//OCLQuery/oclQuery"/>
+    </genClasses>
+    <genClasses ecoreClass="query2table.ecore#//JavaQuery">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query2table.ecore#//JavaQuery/extensionId"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="query2table.ecore#//Context"/>
+    <genClasses ecoreClass="query2table.ecore#//ColumnContext">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference query2table.ecore#//ColumnContext/dependsOn"/>
+    </genClasses>
+    <genClasses ecoreClass="query2table.ecore#//EMFContext">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference query2table.ecore#//EMFContext/modelElement"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

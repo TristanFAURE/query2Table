@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.topcased.model2doc.query2table.query">
+      <query
+            javaQuery="tests.javaQuery.JavaQueryForTests"
+            javaQueryID="javaQueryForTests"></query>
+      <query
+            javaQuery="tests.javaQuery.IvanQuery"
+            javaQueryID="IvanQuery">
+      </query>
+   </extension>
+
+</plugin>

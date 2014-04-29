@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Batch mode for query2table
+Bundle-SymbolicName: org.topcased.model2doc.query2table.batch;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: org.topcased.model2doc.query2table.batch.Activator
+Require-Bundle: org.eclipse.core.runtime,
+ org.topcased.model2doc.query2table,
+ org.eclipse.ui.workbench,
+ org.topcased.facilities,
+ org.eclipse.swt,
+ org.eclipse.core.commands,
+ org.apache.log4j
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: J2SE-1.5

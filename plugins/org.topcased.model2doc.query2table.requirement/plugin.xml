@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.topcased.model2doc.query2table.ui.registeredQ2T">
+      <registered
+            model="model/requirement_traceability.query2table"
+            name="Requirement traceability">
+      </registered>
+   </extension>
+
+</plugin>

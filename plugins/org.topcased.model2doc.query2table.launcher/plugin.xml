@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+       <objectContribution
+            adaptable="false"
+            id="org.topcased.model2doc.query2table.launcher"
+            nameFilter="*.query2table"
+            objectClass="org.eclipse.core.resources.IFile">
+         <action
+               class="org.topcased.model2doc.query2table.launcher.actions.Export2TableLauncher"
+               enablesFor="1"
+               icon="icons/table.gif"
+               id="org.topcased.model2doc.query2table.launcher"
+               label="Launch Query2Table export">
+         </action>
+      </objectContribution>
+   </extension>
+
+</plugin>

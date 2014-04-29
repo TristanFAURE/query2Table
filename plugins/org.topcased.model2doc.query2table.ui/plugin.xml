@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension-point id="registeredQ2T" name="Registered Query 2 Table" schema="schema/registeredQ2T.exsd"/>
+   <extension
+         point="org.eclipse.ui.newWizards">
+         <wizard
+               category="org.topcased.facilities.newWizards"
+               class="org.topcased.model2doc.query2table.ui.Query2TableWizard"
+               icon="icons/table.gif"
+               id="org.topcased.model2doc.query2table.ui.Query2TableWizard"
+               name="Query2Table">
+			<description>Generate table with queries</description>
+			<selection class="org.eclipse.core.resources.IResource"/>
+		</wizard>
+   </extension>
+   <extension
+         point="org.eclipse.ui.exportWizards">
+         <wizard
+			class="org.topcased.model2doc.query2table.ui.Query2TableWizard"
+			category="org.topcased.export.category"
+			name="Query2Table"
+			id="org.topcased.model2doc.query2table.ui.Query2TableWizard">
+			<description>Generate table with queries</description>
+		</wizard>
+   </extension>
+
+</plugin>

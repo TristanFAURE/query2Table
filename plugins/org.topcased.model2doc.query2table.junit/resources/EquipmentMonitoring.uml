@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_qb8akM37EdqwVrslYOdUDA" name="EquipmentMonitoring">
+  <elementImport xmi:id="_2aCKQGy9Ed-tpt6XAMcQ4g">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+  </elementImport>
+  <elementImport xmi:id="_2aCKQWy9Ed-tpt6XAMcQ4g">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+  </elementImport>
+  <elementImport xmi:id="_2aCKQmy9Ed-tpt6XAMcQ4g">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+  </elementImport>
+  <packagedElement xmi:type="uml:Package" xmi:id="__gJw8J-kEd-etu6-58leoA" name="Package1">
+    <packagedElement xmi:type="uml:Package" xmi:id="_wSRJAHFzEduxYLkhQoh7Ag" name="Logical View">
+      <packagedElement xmi:type="uml:Class" xmi:id="_M1BZsGgVEd-145eIsAKPAA" name="Requirements">
+        <ownedAttribute xmi:id="_zLNd0Gy9Ed-tpt6XAMcQ4g" name="name">
+          <eAnnotations xmi:id="_D6CA4J8ZEd-KH_wlvrwQuA" source="http://www.topcased.org/documentation">
+            <details xmi:id="_D6CA4Z8ZEd-KH_wlvrwQuA" key="documentation" value="# OSFC mode shall be Nominal &#xD;&#xA;SET OSFC_mode = Nominal &#xD;&#xA;&#xD;&#xA;# Flight Phase shall either be 1 or 12 &#xD;&#xA;SET Flight_phase = 1 &#xD;&#xA;==> Operational Mode = MAINTENANCE MODE &#xD;&#xA;&#xD;&#xA;# Logs shall have Import Service START and END timestamps&#xD;&#xA;SET Log&amp;Traces level to &quot;INFOS&quot; (TBD) &#xD;&#xA;&#xD;&#xA;# USB mass Storage device with a mediaset of A665 loads available that must be: &#xD;&#xA;- signed, &#xD;&#xA;- targeted ASF or OSF (for load with destination to AISD or PIESD). &#xD;&#xA;&#xD;&#xA;Among this set of loads, there must be:&#xD;&#xA;- a load for OSF target with a file size = 5 Gbytes.&#xD;&#xA;- a load for ASF target with a file size = 2 Gbytes.&#xD;&#xA;- several loads for OSF target with different file size &lt;= 4 Gbytes.&#xD;&#xA;- several loads for ASF target with different file size &lt;= 1 Gbytes.&#xD;&#xA;- a Dafa load for an OSF hosted application with a size under 4 GBytes.&#xD;&#xA;- a Batch load for OSF, and another one for ASF of 1 GBytes for both of them.&#xD;&#xA;- an ARINC 665 load of size 200MB following hash algorithm SHA-1&#xD;&#xA;- an ARINC 665 load of size 200MB following hash algorithm SHA-256&#xD;&#xA;- an ARINC 665 load of size 200MB following hash algorithm SHA-512"/>
+          </eAnnotations>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_5G4yEmy9Ed-tpt6XAMcQ4g" name="description">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_7-6vAJ8ZEd-KH_wlvrwQuA" name="Property1">
+          <eAnnotations xmi:id="_9F160J8ZEd-KH_wlvrwQuA" source="http://www.topcased.org/documentation">
+            <details xmi:id="_9F160Z8ZEd-KH_wlvrwQuA" key="documentation" value="#Check OSFC mode is nominal &#xD;&#xA;CHECK OSFC_mode = Nominal &#xD;&#xA;&#xD;&#xA;# Check the flight phase is valid and is equal to 1 or 12&#xD;&#xA;CHECK Flight_Phase = 1&#xD;&#xA;=> CHECK Op_mode = Maintenance&#xD;&#xA;"/>
+          </eAnnotations>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedOperation xmi:id="_4jDIoKkrEd-G4c58FkZ2bg" name="isValid">
+          <ownedParameter xmi:id="_6jMbcKkrEd-G4c58FkZ2bg" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_HKBLcKUuEd-36evkJSpxzw" name="Class2">
+        <ownedAttribute xmi:id="_xUEZcKkrEd-G4c58FkZ2bg" name="attr1">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_zwFI4KkrEd-G4c58FkZ2bg" name="attr2">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_0DJ14KkrEd-G4c58FkZ2bg" name="attr3">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedAttribute>
+        <ownedOperation xmi:id="_xUEZcakrEd-G4c58FkZ2bg" name="myOperation">
+          <ownedParameter xmi:id="_xUEZcqkrEd-G4c58FkZ2bg" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_xqt-4KkrEd-G4c58FkZ2bg" name="myOperation2">
+          <ownedParameter xmi:id="_xqt-4akrEd-G4c58FkZ2bg" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_KAHO0KUuEd-36evkJSpxzw" name="Class3">
+      <ownedAttribute xmi:id="_mA2YwKkrEd-G4c58FkZ2bg" name="attr1">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_r4IVMKkrEd-G4c58FkZ2bg" name="myOperation">
+        <ownedParameter xmi:id="_ui5SUKkrEd-G4c58FkZ2bg" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+  </packagedElement>
+</uml:Model>

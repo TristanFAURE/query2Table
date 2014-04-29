@@ -1,0 +1,48 @@
+<html>
+<body>
+
+<table border="1">
+
+<tr><td>Packages</td><td>Classes</td><td>&nbsp;</td></tr>
+
+<tr><td rowspan="2">Package1</td><td>Class1</td><td>
+
+<table border="1">
+<tr><td>Attributes</td><td>Types</td></tr>
+<tr><td>attr1</td><td>String</td></tr>
+<tr><td>attr2</td><td>Integer</td></tr>
+<tr><td>attr3</td><td>String</td></tr>
+</table>
+&nbsp;
+<table border="1">
+<tr><td>Operations</td></tr>
+<tr><td>operation1</td></tr>
+<tr><td>operation2</td></tr>
+</table>
+
+
+</td></tr>
+<tr>
+<td>Class2</td><td>
+
+<table border="1">
+<tr><td>Attributes</td><td>Types</td></tr>
+<tr><td>attr4</td><td>String</td></tr>
+<tr><td>attr5</td><td>Integer</td></tr>
+</table>
+&nbsp;
+<table border="1">
+<tr><td>Operations</td></tr>
+<tr><td>operation4</td></tr>
+<tr><td>operation5</td></tr>
+<tr><td>operation6</td></tr>
+</table>
+
+
+</td>
+</tr>
+
+
+
+</body>
+</html>

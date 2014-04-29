@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="query2table"
+    nsURI="http://www.topcased.org/query2table/1.0" nsPrefix="query2table">
+  <eClassifiers xsi:type="ecore:EClass" name="ModelExport">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="outputPath" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Resource corresponding to the model to work with."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="exportExtension" lowerBound="1"
+        eType="#//ExportExtension"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="columns" upperBound="-1"
+        eType="#//Column" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="emfContext" eType="#//EMFContext"
+        changeable="false" derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dependencyManagement" eType="#//DependencyManagement"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cellSpan" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Column">
+    <eOperations name="addDisplayQuery">
+      <eParameters name="displayQuery" eType="#//Query"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="index" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="title" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pattern" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="displays" upperBound="-1"
+        eType="#//Query" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="executes" lowerBound="1"
+        eType="#//Query" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultValueToDisplay"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Query" abstract="true">
+    <eOperations name="executeQuery" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject">
+      <eParameters name="contextValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="executionContext" eType="#//Context"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OCLQuery" eSuperTypes="#//Query">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="oclQuery" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="JavaQuery" eSuperTypes="#//Query">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="extensionId" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Id of the extension to JavaQuery extension point"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Context" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ColumnContext" eSuperTypes="#//Context">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dependsOn" lowerBound="1"
+        eType="#//Column"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EMFContext" eSuperTypes="#//Context">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="modelElement" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ExportExtension">
+    <eLiterals name="xls" literal="xls"/>
+    <eLiterals name="html" value="1" literal="html"/>
+    <eLiterals name="csv" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="DependencyManagement">
+    <eLiterals name="SUBTABLE" value="1"/>
+    <eLiterals name="DUPLICATE"/>
+  </eClassifiers>
+</ecore:EPackage>

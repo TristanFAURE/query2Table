@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query2table:ModelExport xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:query2table="http://www.topcased.org/query2table/1.0" outputPath="D:/AHD/exportEnHTML.html" exportExtension="html">
+  <columns title="Classes" >
+    <executes xsi:type="query2table:OCLQuery" oclQuery="Class.allInstances()">
+      <executionContext xsi:type="query2table:EMFContext">
+        <modelElement href="EquipmentMonitoring.uml#_qb8akM37EdqwVrslYOdUDA"/>
+      </executionContext>
+    </executes>
+  </columns>
+  <columns index="1" title="Properties">
+    <executes xsi:type="query2table:OCLQuery" oclQuery="self.ownedAttribute">
+      <executionContext xsi:type="query2table:ColumnContext" dependsOn="//@columns.0"/>
+    </executes>
+  </columns>
+  <columns index="2" title="Types" >
+    <executes xsi:type="query2table:OCLQuery" oclQuery="self.type">
+      <executionContext xsi:type="query2table:ColumnContext" dependsOn="//@columns.1"/>
+    </executes>
+  </columns>
+</query2table:ModelExport>

@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Gentable wizard
+Bundle-SymbolicName: org.topcased.model2doc.query2table.ui;singleton:=true
+Bundle-Version: 1.0.3.qualifier
+Bundle-Activator: org.topcased.model2doc.query2table.ui.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.ui.forms,
+ org.topcased.model2doc.query2table,
+ org.eclipse.emf.common.ui,
+ org.topcased.tabbedproperties,
+ org.eclipse.emf.edit,
+ org.eclipse.emf.edit.ui,
+ org.eclipse.core.resources
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
